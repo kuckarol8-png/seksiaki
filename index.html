@@ -95,6 +95,14 @@ button.opt{display:block;width:100%;text-align:left;font:inherit;color:inherit;c
 .lg{width:40px;height:40px;flex:none;display:block}
 @media (max-width:340px){.top .logo .wm{display:none}}
 .grp{margin:24px 0 0;font-weight:800;font-size:.9rem;color:var(--mute)}.grp+.mods{margin-top:10px}
+.faq{margin-top:26px}
+.faq details{background:var(--card);border:2px solid var(--line);border-radius:18px;padding:0 18px;margin-bottom:10px}
+.faq details[open]{border-color:var(--pink)}
+.faq summary{cursor:pointer;font-weight:800;padding:16px 28px 16px 0;list-style:none;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:0;top:50%;transform:translateY(-50%);font-size:1.4rem;color:var(--pink)}
+.faq details[open] summary::after{content:"\2212"}
+.faq p{color:var(--mute);margin:0 0 16px}
 </style>
 </head>
 <body>
@@ -134,7 +142,7 @@ button.opt{display:block;width:100%;text-align:left;font:inherit;color:inherit;c
       <h2>Rozmawiamy o tym, o czym wszyscy myślą.</h2>
       <p class="sub">Seksiaki to nowoczesna platforma edukacyjna dla młodych ludzi. Krótkie lekcje i quizy z natychmiastową informacją zwrotną pomagają zrozumieć zgodę, granice, własne ciało i zdrowie. Poza modułami w aplikacji są dodatkowe narzędzia: Seksi-słownik z prostymi wyjaśnieniami pojęć oraz sekcja „Wsparcie i pomoc” z numerami telefonów zaufania. Luźny ton, ale wiedza na poważnie.</p>
       <div class="tiles">
-        <article class="tile"><div class="ic" style="background:var(--mintbg)">🧠</div><h3>Rzetelna wiedza</h3><p>Sześć modułów z krótkimi lekcjami i quizami. Prosty język, fakty zamiast plotek z internetu.</p></article>
+        <article class="tile"><div class="ic" style="background:var(--mintbg)">🧠</div><h3>Rzetelna wiedza</h3><p>Osiem modułów z krótkimi lekcjami i quizami. Prosty język, fakty zamiast plotek z internetu.</p></article>
         <article class="tile"><div class="ic" style="background:#FFE9B8">📱</div><h3>Zawsze pod ręką</h3><p>Działa w przeglądarce i można ją dodać do ekranu głównego jak zwykłą aplikację. Bez pobierania ze sklepu.</p></article>
         <article class="tile"><div class="ic" style="background:#F9D9E6">🛡️</div><h3>Bezpiecznie i prywatnie</h3><p>Bez konta i bez oceniania. W aplikacji jest sekcja „Wsparcie i pomoc” z numerami 116 111 i 112 oraz przycisk szybkiego wyjścia.</p></article>
       </div>
@@ -153,6 +161,8 @@ button.opt{display:block;width:100%;text-align:left;font:inherit;color:inherit;c
         <span>📱 Internet i relacje</span>
         <span>🔎 Mit czy fakt?</span>
         <span>🎬 Porno vs. Rzeczywistość</span>
+        <span>🌱 Dojrzewanie i zmiany w ciele</span>
+        <span>💬 Pierwsze relacje i komunikacja</span>
       </div>
       <p class="grp">Dodatkowe narzędzia w aplikacji</p>
       <div class="mods">
@@ -172,6 +182,20 @@ button.opt{display:block;width:100%;text-align:left;font:inherit;color:inherit;c
         <article class="tile"><h3>🍎 iPhone (Safari)</h3><ol><li>Otwórz aplikację w przeglądarce Safari.</li><li>Dotknij ikony udostępniania (kwadrat ze strzałką).</li><li>Przewiń i wybierz „Do ekranu początkowego”.</li><li>Dotknij „Dodaj”. Ikona pojawi się na ekranie.</li></ol></article>
       </div>
       <p style="margin-top:22px"><a class="btn" href="https://seksiakiapk.netlify.app">Otwórz aplikację →</a></p>
+    </div>
+  </section>
+
+  <section id="faq" style="padding-top:0">
+    <div class="wrap">
+      <span class="eyebrow">FAQ</span>
+      <h2>Najczęstsze pytania</h2>
+      <div class="faq">
+        <details><summary>Czy aplikacja jest anonimowa?</summary><p>Tak. Nie ma kont ani logowania i nie pytamy o imię ani e-mail. Jeśli zostawisz zapisywanie włączone, zapisujemy tylko anonimowe wyniki quizów (moduł, wynik i wybrane odpowiedzi), żeby ulepszać treści. Możesz to wyłączyć w menu aplikacji.</p></details>
+        <details><summary>Czy muszę mieć konto?</summary><p>Nie. Wchodzisz w link i możesz się uczyć od razu. Postęp zapisuje się tylko na Twoim telefonie.</p></details>
+        <details><summary>Czy to kosztuje?</summary><p>Nie, dostęp jest bezpłatny.</p></details>
+        <details><summary>Czy Seksiaki zastępują lekarza albo psychologa?</summary><p>Nie. To materiały edukacyjne. Przy objawach, wątpliwościach lub trudnych emocjach skonsultuj się ze specjalistą. Telefon zaufania dla dzieci i młodzieży: 116 111. W nagłej sytuacji dzwoń na 112.</p></details>
+        <details><summary>Co zrobić, gdy muszę szybko zamknąć aplikację?</summary><p>W aplikacji jest przycisk „✕ Wyjdź” w prawym górnym rogu. Od razu przenosi on na neutralną stronę.</p></details>
+      </div>
     </div>
   </section>
 
@@ -201,7 +225,10 @@ document.getElementById('y').textContent=new Date().getFullYear();
 var D=[
 {q:'Ktoś mówi „tak” na pocałunek. Co to oznacza?',o:['Że zgadza się też na wszystko inne','Że zgadza się na pocałunek, a o resztę trzeba zapytać','Że nie może już zmienić zdania'],a:1,e:'Zgoda jest konkretna. „Tak” na jedną rzecz dotyczy tylko tej rzeczy.'},
 {q:'Ktoś w trakcie intymnej sytuacji mówi „stop”. Co robisz?',o:['Przestaję od razu','Pytam „na pewno?” i próbuję przekonać'],a:0,e:'Zgodę można odwołać w każdej chwili. „Stop” oznacza stop, bez negocjacji.'},
-{q:'Mit czy fakt: po wyglądzie można poznać, że ktoś ma infekcję przenoszoną drogą płciową.',o:['Fakt','Mit'],a:1,e:'Mit. Wiele infekcji nie daje objawów, więc po wyglądzie niczego nie poznasz. Pomagają badania i prezerwatywa.'}
+{q:'Mit czy fakt: po wyglądzie można poznać, że ktoś ma infekcję przenoszoną drogą płciową.',o:['Fakt','Mit'],a:1,e:'Mit. Wiele infekcji nie daje objawów, więc po wyglądzie niczego nie poznasz. Pomagają badania i prezerwatywa.'},
+{q:'Ktoś pisze: „Jak mnie kochasz, to wyślij zdjęcie”. Co to jest?',o:['Dowód uczuć','Presja, na którą nie musisz się godzić'],a:1,e:'Miłość nie polega na wymuszaniu. Masz prawo powiedzieć „nie” bez tłumaczenia się.'},
+{q:'Mit czy fakt: za pierwszym razem nie da się zajść w ciążę.',o:['Fakt','Mit'],a:1,e:'Mit. Ciąża jest możliwa za każdym razem, także za pierwszym.'},
+{q:'Ktoś odpowiedział „nie, dziękuję” na Twoje zaproszenie. Co robisz?',o:['Szanuję decyzję i daję sobie czas na emocje','Namawiam, aż się zgodzi'],a:0,e:'Odrzucenie boli, ale „nie” trzeba uszanować. Pomaga rozmowa z kimś bliskim.'}
 ],di=0,dl=false;
 function g(i){return document.getElementById(i)}
 function dRender(){
