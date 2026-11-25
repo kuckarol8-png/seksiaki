@@ -103,6 +103,31 @@ button.opt{display:block;width:100%;text-align:left;font:inherit;color:inherit;c
 .faq summary::after{content:"+";position:absolute;right:0;top:50%;transform:translateY(-50%);font-size:1.4rem;color:var(--pink)}
 .faq details[open] summary::after{content:"\2212"}
 .faq p{color:var(--mute);margin:0 0 16px}
+.eb{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:10px}
+.eb .eyebrow{margin-bottom:0}
+.badge{font-size:.75rem;font-weight:800;background:var(--sun);color:#2A1442;border-radius:99px;padding:3px 12px}
+.tiles.t2{grid-template-columns:repeat(2,1fr)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:20px}
+.card2{background:var(--card);border:2px solid var(--line);border-radius:24px;padding:24px}
+.card2.alt{background:var(--mintbg);border-color:transparent;color:var(--ink)}
+.card2 h3{font-size:1.15rem}
+.rules{margin:0;padding-left:1.3em;color:var(--mute)}
+.rules li{margin-bottom:.6em}
+.rules b{color:var(--ink)}
+blockquote{margin:0 0 12px;padding:12px 14px;border-left:5px solid var(--pink);background:var(--card);border-radius:0 14px 14px 0;font-style:italic}
+.qs{margin:0;padding-left:1.2em}
+.qs li{margin-bottom:.4em}
+.note{margin:22px 0 0;padding:14px 18px;border:2px dashed var(--line);border-radius:16px;background:var(--card);color:var(--mute);font-size:.95rem}
+.btnrow{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.btn.out{background:transparent;color:var(--ink);border:2px solid var(--line);box-shadow:none}
+.btn.out:hover{border-color:var(--pink);box-shadow:none}
+.fine2{font-size:.85rem;color:var(--mute);margin:12px 0 0}
+.free{background:var(--mintbg);border-radius:18px;padding:16px 18px;margin:22px 0;color:var(--ink)}
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;list-style:none;padding:0;margin:14px 0 0}
+.flow li{background:var(--card);border:2px solid var(--line);border-radius:18px;padding:14px;font-size:.95rem;color:var(--mute)}
+.flow b{display:inline-block;background:var(--pink);color:#fff;border-radius:99px;padding:2px 10px;font-size:.8rem;margin-bottom:8px}
+@media (max-width:820px){.two,.tiles.t2{grid-template-columns:1fr}.flow{grid-template-columns:1fr 1fr}.btnrow .btn{display:block;width:100%}}
+@media (max-width:480px){.flow{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -172,6 +197,71 @@ button.opt{display:block;width:100%;text-align:left;font:inherit;color:inherit;c
     </div>
   </section>
 
+  <section id="rodzice" style="padding-top:0">
+    <div class="wrap">
+      <div class="eb"><span class="eyebrow">Dla rodziców</span><span class="badge">Koncepcja · w przygotowaniu</span></div>
+      <h2>Rozmowa z nastolatkiem bez wstydu i kazania.</h2>
+      <p class="sub">Wielu dorosłych chce rozmawiać z młodzieżą o ciele, granicach, dojrzewaniu i bezpieczeństwie w sieci, ale nie wie, jak zacząć. Przygotowujemy materiały, które pomagają zrobić to spokojnie i na równi.</p>
+      <div class="tiles">
+        <article class="tile"><div class="ic" style="background:#FFE9B8">🗣️</div><h3>Przewodniki rozmów</h3><p>Krótkie przewodniki do tematów: dojrzewanie, granice i zgoda, internet i sexting, relacje.</p></article>
+        <article class="tile"><div class="ic" style="background:var(--mintbg)">🚪</div><h3>Gotowe otwarcia</h3><p>Zdania, którymi można zacząć trudną rozmowę, nie robiąc z niej przesłuchania.</p></article>
+        <article class="tile"><div class="ic" style="background:#F9D9E6">❓</div><h3>Pytania do rozmowy</h3><p>Zestaw pytań otwartych, które zachęcają nastolatka do mówienia, a nie do tłumaczenia się.</p></article>
+      </div>
+      <div class="two">
+        <div class="card2">
+          <h3>5 zasad rozmowy</h3>
+          <ol class="rules">
+            <li><b>Zacznij od ciekawości, nie od zakazu.</b> Zapytaj, co młody człowiek już wie i słyszy.</li>
+            <li><b>Krótko i spokojnie.</b> Kilka małych rozmów działa lepiej niż jedna „ta wielka”.</li>
+            <li><b>Fakty i prawidłowe nazwy.</b> Bez wstydu i bez zdrobnień, które zasłaniają temat.</li>
+            <li><b>Słuchaj bez oceniania.</b> Reaguj spokojnie, nawet jeśli coś Cię zaskoczy.</li>
+            <li><b>Zostaw otwarte drzwi.</b> Powiedz wprost, że można zapytać o wszystko i w każdej chwili.</li>
+          </ol>
+        </div>
+        <div class="card2 alt">
+          <h3>Przykładowe otwarcia</h3>
+          <blockquote>„W szkole i w sieci pewnie słyszysz różne rzeczy o związkach. Chcesz o tym pogadać albo coś sprawdzić razem?”</blockquote>
+          <blockquote>„Nie musisz mi nic mówić. Chcę tylko, żebyś wiedział lub wiedziała, że możesz zapytać o wszystko.”</blockquote>
+          <h3 style="margin-top:18px">Pytania do rozmowy</h3>
+          <ul class="qs"><li>Co według Ciebie znaczy dobra relacja?</li><li>Skąd najczęściej bierzesz informacje o takich sprawach?</li><li>Co byś zrobił lub zrobiła, gdyby ktoś poprosił Cię o zdjęcie?</li></ul>
+        </div>
+      </div>
+      <p class="note">Gdy Twoje dziecko potrzebuje pomocy, może zadzwonić na telefon zaufania dla dzieci i młodzieży <b>116 111</b>. W nagłej sytuacji: <b>112</b>.</p>
+      <div class="btnrow">
+        <a class="btn" href="https://forms.gle/nD8uWP5uZakJE4YSA" target="_blank" rel="noopener noreferrer">Powiedz, czego potrzebujesz →</a>
+        <a class="btn out" href="https://seksiakiapk.netlify.app">Zobacz aplikację dla młodzieży</a>
+      </div>
+      <p class="fine2">Link prowadzi do krótkiej, anonimowej ankiety. Bez płatności i zamówień: to jeszcze koncepcja.</p>
+    </div>
+  </section>
+
+  <section id="szkoly" style="padding-top:0">
+    <div class="wrap">
+      <div class="eb"><span class="eyebrow">Dla szkół i edukatorów</span><span class="badge">Koncepcja · w przygotowaniu</span></div>
+      <h2>Zajęcia, które łączą aplikację z rozmową w klasie.</h2>
+      <p class="sub">Nauczyciele i pedagodzy często nie mają gotowych, rzetelnych materiałów do zajęć o relacjach, zgodzie i zdrowiu. Pracujemy nad pakietami, które łączą moduły i quizy z aplikacji z prowadzoną rozmową.</p>
+      <div class="free"><b>✅ Aplikacja pozostaje bezpłatna dla młodzieży.</b> Lekcje, quizy, Seksi-słownik i sekcja wsparcia są dostępne dla wszystkich. Pakiety dla szkół i instytucji to kierunek rozwoju projektu, a nie warunek korzystania z aplikacji.</div>
+      <div class="tiles t2">
+        <article class="tile"><div class="ic" style="background:#E3F6D8">📋</div><h3>Scenariusze lekcji</h3><p>Gotowe plany zajęć (np. 45 minut) powiązane z modułami aplikacji, z celami i pytaniami do dyskusji.</p></article>
+        <article class="tile"><div class="ic" style="background:#FFE9B8">🗂️</div><h3>Karty pracy</h3><p>Ćwiczenia indywidualne i grupowe, które utrwalają temat i pomagają mówić o nim bez wstydu.</p></article>
+        <article class="tile"><div class="ic" style="background:#DCE8FF">🔁</div><h3>Aplikacja + rozmowa</h3><p>Uczniowie robią moduł i quiz w telefonie, a potem omawiają wnioski w klasie, bez ujawniania, kto jak odpowiedział.</p></article>
+        <article class="tile"><div class="ic" style="background:#F9D9E6">🧑‍🏫</div><h3>Wsparcie dla nauczycieli</h3><p>Wskazówki, jak prowadzić trudne pytania i co zrobić, gdy uczeń prosi o pomoc: do kogo go odesłać, w tym pod 116 111.</p></article>
+      </div>
+      <h3 style="margin-top:34px">Przykład: scenariusz „Granice i zgoda” (45 min)</h3>
+      <ol class="flow">
+        <li><b>5 min</b>Wprowadzenie i zasady rozmowy w grupie</li>
+        <li><b>10 min</b>Moduł 1 i quiz w aplikacji</li>
+        <li><b>20 min</b>Rozmowa w grupach według kart pracy</li>
+        <li><b>10 min</b>Podsumowanie i informacja o wsparciu</li>
+      </ol>
+      <div class="btnrow">
+        <a class="btn" href="https://forms.gle/nD8uWP5uZakJE4YSA" target="_blank" rel="noopener noreferrer">Jestem nauczycielem lub pedagogiem →</a>
+        <a class="btn out" href="https://seksiakiapk.netlify.app">Zobacz moduły w aplikacji</a>
+      </div>
+      <p class="fine2">Link prowadzi do krótkiej, anonimowej ankiety, w której możesz napisać, czego potrzebujesz. Nie ma jeszcze cennika ani zamówień.</p>
+    </div>
+  </section>
+
   <section id="instalacja" style="padding-top:0">
     <div class="wrap">
       <span class="eyebrow">Na telefonie</span>
@@ -192,7 +282,7 @@ button.opt{display:block;width:100%;text-align:left;font:inherit;color:inherit;c
       <div class="faq">
         <details><summary>Czy aplikacja jest anonimowa?</summary><p>Tak. Nie ma kont ani logowania i nie pytamy o imię ani e-mail. Jeśli zostawisz zapisywanie włączone, zapisujemy tylko anonimowe wyniki quizów (moduł, wynik i wybrane odpowiedzi), żeby ulepszać treści. Możesz to wyłączyć w menu aplikacji.</p></details>
         <details><summary>Czy muszę mieć konto?</summary><p>Nie. Wchodzisz w link i możesz się uczyć od razu. Postęp zapisuje się tylko na Twoim telefonie.</p></details>
-        <details><summary>Czy to kosztuje?</summary><p>Nie, dostęp jest bezpłatny.</p></details>
+        <details><summary>Czy to kosztuje?</summary><p>Nie. Aplikacja z lekcjami, quizami, słownikiem i wsparciem jest bezpłatna dla młodzieży. Myślimy o dodatkowych materiałach dla rodziców oraz pakietach dla szkół, ale to na razie koncepcja, bez płatności i zamówień.</p></details>
         <details><summary>Czy Seksiaki zastępują lekarza albo psychologa?</summary><p>Nie. To materiały edukacyjne. Przy objawach, wątpliwościach lub trudnych emocjach skonsultuj się ze specjalistą. Telefon zaufania dla dzieci i młodzieży: 116 111. W nagłej sytuacji dzwoń na 112.</p></details>
         <details><summary>Co zrobić, gdy muszę szybko zamknąć aplikację?</summary><p>W aplikacji jest przycisk „✕ Wyjdź” w prawym górnym rogu. Od razu przenosi on na neutralną stronę.</p></details>
       </div>
